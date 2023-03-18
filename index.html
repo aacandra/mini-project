@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTSTREAM</title>
+    
+    <!-- Bootstrap Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Additional Links -->
+
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@700&display=swap" 
+        rel="stylesheet">
+
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" 
+    rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+       <!-- Navbar Area -->
+    
+     <header class="navbar-wrap">              
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container" >
+                  <a class="navbar-brand" href="./index.html"> <img src="./assets/image/logo-nextstream.png"></a>
+                  <button 
+                  class="navbar-toggler" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+        
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-5 mb-lg-0">
+                      <li class="nav-item mx-3">
+                        <a class="nav-link" href="#movies">Movies</a>
+                      </li>
+                      <li class="nav-item mx-3">
+                        <a class="nav-link" href="#best-series">Series</a>
+                      </li>              
+                      <li class="nav-item mx-3">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item mx-3">
+                        <a class="nav-link" href="#" 
+                        data-bs-toggle="modal"
+                        data-bs-target="#signInModal"
+                        >Sign In</a>
+                      </li>
+                    </ul>
+
+                    <form id="search" action="#">
+                      <input type="text" 
+                        placeholder="Search"
+                        id='searchText' 
+                        name="searchKeyword" 
+                        onkeypress="handle" 
+                        style="margin: 10px 40px;"/>
+                      
+                    </form>                    
+                  </div>
+                </div>
+              </nav>
+     </header>
+    
+      <!-- Home Slider/Carrousel -->
+       <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          style="margin-top: -100px;"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="indicator active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              class="indicator"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              class="indicator"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="./assets/image/asset-13.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" 
+              data-bs-toggle="modal" 
+              data-bs-target="#movie3">
+               <h5>We Have A Ghost</h5>
+                <p>Finding a ghost named Ernest haunting their new home turns Kevin's family into overnight social media sensations. </p>                    
+                 <button type="button" class="btn btn-info" style="font-size:13px; color:#fff">
+                  <i class="bi bi-play-fill text-light" ></i> Watch Now
+                </button>
+             
+
+            </div>
+          </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="./assets/image/asset-1.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Silent Song di The Night</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+              <button type="button" class="btn btn-info"  style="font-size:13px; color: #fff;">
+                <i class="bi bi-play-fill text-light"></i> Watch Now
+              </button>
+
+            </div>
+    
+        </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img src="./assets/image/asset-8.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Aqua Man</h5>
+              <p>He is Not From Around Here.</p>
+              <button type="button" class="btn btn-info"  style="font-size:13px; color:#fff">
+                <i class="bi bi-play-fill text-light"></i> Watch Now
+              </button>
+            </div>
+    
+          </div>
+        </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button> -->
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+
+      <!-- alert -->
+     <div class="ex-alert">
+          Alert
+         <div class="alert alert-info alert-dismissible fade show" role="alert" style="background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));;">
+           New Movie Series in March 2023, Check it Out!
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>     
+     </div>  
+   
+     <!--Premier Movies  -->
+     <section class="premiereMovies">
+        <div class="container-premiere">
+          <div class="row">
+             <div class="col-lg-12">
+                <h2 class="block-title">PREMIERE</h2>
+             </div> 
+
+              <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">                     
+                   <a class="premiereThumb" 
+                   data-bs-toggle="modal" 
+                   href="#movie1">
+                    <img src="./assets/image/asset-9.jpg" alt="">                    
+                    <span> <i class="bi bi-play-circle"></i></span>               
+                   </a> 
+                       <div class="premiereLabel">
+                        <p>Transformers: The Last Knight</p>
+
+                    </div>
+                      <span class="premiereLabelgenre">2017</span>
+                      <span class="premiereLabelgenre">18+</span>
+                      <span class="premiereLabelgenre">Action</span>
+                                  
+                     
+                    
+             </div>
+               <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6"> 
+                 <div class="row">  
+                    <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                      <a class="premiereThumbsmall" href="./">
+                            <img src="./assets/image/last sentinel.jpg" alt="">
+                            <span> <i class="bi bi-play-circle"></i></span>
+                     </a>
+                     <div class="video-content-premiere">
+                        <div class="premiereLabel">
+                           <p>Last Sentinel </p> 
+                           
+                        </div>
+                     </div>
+                    </div>
+                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                   <a class="premiereThumbsmall" href="./">
+                        <img src="./assets/image/asset-3.jpg" alt="">
+                        <span> <i class="bi bi-play-circle"></i></span>
+                   </a>
+
+                   <div class="video-content-premiere">
+                    <div class="premiereLabel">
+                        <p>The Climber </p>
+                    </div>
+                   </div>
+
+                 </div>
+             <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                <a class="premiereThumbsmall" href="./">
+                    <img src="./assets/image/asset-10.jpeg" alt="">
+                    <span> <i class="bi bi-play-circle"></i></span>
+                </a>
+                 <div class="video-content-premiere">
+                    <div class="premiereLabel">
+                        <p> Wolf </p>
+                    </div>
+                </div>
+
+             </div>
+             <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                <a class="premiereThumbsmall" href="./">
+                    <img src="./assets/image/asset-6.jpg" alt="">
+                    <span> <i class="bi bi-play-circle"></i></span>
+                </a>
+                <div class="video-content-premiere">
+                    <div class="premiereLabel">
+                        <p>The Drive In </p>
+                    </div>
+                </div>
+             </div>
+                 </div>
+                </div>
+         </div>
+      </div>
+
+     </section>
+   
+
+     <!-- Trending Now-->
+
+     <section class="trending">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+                <h2 class="block-title">TRENDING NOW</h2>
+          </div> 
+          <div class="col-md-12" > 
+            <div class="season-tabs">
+              <ul class="nav nav-pills mb-3" id="pills-tab-seasons" role="tablist">
+                  <li class="nav-item" role="presentation">
+                      <a class="nav-link active" data-bs-toggle="pill" href="#pills-additions" role="tab" aria-selected="true">Featured</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                      <a class="nav-link" data-bs-toggle="pill" href="#pills-movies" role="tab" aria-selected="false">Movies</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                      <a class="nav-link" data-bs-toggle="pill" href="#pills-shows" role="tab" aria-selected="false">Series</a>
+                  </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div id="pills-additions" class="tab-pane animated fadeInRight show active">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block" 
+                             data-bs-toggle="modal" 
+                             data-bs-target="#movie2">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb1.jpg"></a>    
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">Jung E</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block"
+                            data-bs-toggle="modal" 
+                             data-bs-target="#movie3">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb2.jpg"></a>
+                                    
+                                 
+                                </div>
+                           
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">We Have Ghost</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb3.jpg"></a>
+                                   
+                                  
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">Peninsula</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                      
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb4.jpg"></a>
+                                    
+                                    
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">A Man Called Otto</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb5.jpg"></a>
+                                    
+                                   
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">They Are Dying</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb7.jpg"></a>
+                                    
+                                    
+                                </div>
+                                                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">People Hearts</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                
+                <div id="pills-movies" class="tab-pane animated fadeInRight">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb9.jpg"></a>
+                                    
+                                 
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">A dam wind</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                           
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb8.jpg"></a>
+                                    
+                                    
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">the message</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb7.jpg"></a>
+                                    
+                                   
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">Verbal messages</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                      
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb6.jpg"></a>
+                                    
+                                   
+                                </div>
+                             
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">hard life</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                      
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb5.jpg"></a>
+                                    
+                                  
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">Destiny</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb4.jpg"></a>
+                                  
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">Paper hero</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                
+                <div id="pills-shows" class="tab-pane animated fadeInRight">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb3.jpg"></a>
+                                  
+                                    
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">the border</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                         
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb2.jpg"></a>
+                                
+                                  
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">life or death</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                     
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb5.jpg"></a>
+                                    
+                                 
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Out of life</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb4.jpg"></a>
+                                    
+                                
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">A Man Called Otto </a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                           
+                        </div>
+                     
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb3.jpg"></a>
+                                    
+                                 
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Peninsula</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                           
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb2.jpg"></a>
+                                    
+                                   
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">We Have A Ghost</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                          
+                        </div>
+                    
+                    </div>
+                 
+                </div>
+            
+              </div>  
+
+            </div>
+      
+          </div> 
+              
+                 
+        </div>
+      </div>
+
+     </section>
+
+
+     <!-- Featured Movie Section -->
+     <section class="featured-movie">
+         <div class="container">          
+             <d class="row">
+               <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">
+                  <div class="featured-movie__content">
+                    <img width="187" height="59" src="./assets/image/asset-logo.png" class="featured-movie__content-image" style="margin-bottom:61px ;" alt="" decoding="async" loading="lazy">     
+                    
+                        <div class="movies__inner">
+                         <div class="movie__body">
+                            <div class="movie__info">
+                                <div class="movie__info--head">                                 
+                                  <div class="movie__short-description" style="color:#fff">
+                                      <div>
+                                        <h3>The Last Heroes</h3>
+                                       <p>Strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.</p> 
+                                       <button type="button" class="btn btn-info" style="font-size:13px; color:#fff">
+                                        <i class="bi bi-play-fill text-light" ></i> Watch Now
+                                      </button>                                       
+                                     
+                                       </div> 
+                                  </div>
+                               </div>
+                            </div> 
+                          </div>          
+                       </div>               
+                    </div>
+                </div>
+                   
+                
+                <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6" style="margin-top: 50px;">
+                    <a class="featured-movie-icon">
+                    <i class="bi bi-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+         </div>
+    </section>
+
+
+
+    <!-- Movies Section-->
+      <section class="movies" id="movies">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="block-title">MOVIES</h2>
+                </div>
+              
+            </div>
+           
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div class="video-block">
+                        <div class="video-thumb position-relative">
+                            <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb9.jpg"></a>
+                            
+                           
+                        </div>
+                       
+                        <div class="video-content">
+                            <h2 class="video-title"><a href="movie-single.html">Sonic The HedgeHog</a></h2>
+                            <div class="video-info d-flex align-items-center">
+                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                            </div>
+                        </div>
+                       
+                    </div>
+              
+                </div>
+              
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div class="video-block">
+                        <div class="video-thumb position-relative">
+                            <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb8.jpg"></a>
+                            
+                           
+                        </div>
+                     
+                        <div class="video-content">
+                            <h2 class="video-title"><a href="movie-single.html">Call Me Chihiro</a></h2>
+                            <div class="video-info d-flex align-items-center">
+                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                            </div>
+                        </div>
+                     
+                    </div>
+                   
+                </div>
+                
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div class="video-block">
+                        <div class="video-thumb position-relative">
+                            <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb7.jpg"></a>
+                            
+                            
+                        </div>
+                       
+                        <div class="video-content">
+                            <h2 class="video-title"><a href="movie-single.html">People Hearts</a></h2>
+                            <div class="video-info d-flex align-items-center">
+                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div class="video-block">
+                        <div class="video-thumb position-relative">
+                            <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb6.jpg"></a>
+                            
+                            
+                        </div>
+                        
+                        <div class="video-content">
+                            <h2 class="video-title"><a href="movie-single.html">The Invitation</a></h2>
+                            <div class="video-info d-flex align-items-center">
+                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+                
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div class="video-block">
+                        <div class="video-thumb position-relative">
+                            <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb5.jpg"></a>
+                            
+                         
+                        </div>
+                      
+                        <div class="video-content">
+                            <h2 class="video-title"><a href="movie-single.html">They Are Dying To Save</a></h2>
+                            <div class="video-info d-flex align-items-center">
+                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+               
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div class="video-block">
+                        <div class="video-thumb position-relative">
+                            <a href="#"><img alt="" class="img-fluid" src="./assets/image/thumb4.jpg"></a>
+                           
+                         
+                        </div>
+                        
+                        <div class="video-content">
+                            <h2 class="video-title"><a href="movie-single.html">A Man Called Otto</a></h2>
+                            <div class="video-info d-flex align-items-center">
+                                <span class="video-year">2021</span> <span class="video-age">+18</span> <span class="video-type">Action</span>
+                            </div>
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+             
+            </div>
+          
+        </div>
+     
+      </section>
+
+    <!-- Best Series Section-->
+       <section class="best-series" id="best-series">
+        <div class="container-fluid">
+        <div class="season-header text-center" style="color: white;">
+             <h2 class="mb-4">Best Series</h2>
+        </div>
+        <div class="season-tabs">
+            <ul class="nav nav-pills mb-3 justify-content-center mb-5" id="pills-tab-seasons" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="pill" href="#pills-drama" role="tab" aria-selected="false">Drama</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#pills-action" role="tab" aria-selected="true">Action</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="pill" href="#pills-romance" role="tab" aria-selected="false">Romance</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tab-Content">
+                <div id="pills-drama" class="tab-pane animated fadeInRight show">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama1.jpg"></a>
+                                    
+                                   
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Tsunami</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2019</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                         
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama2.jpg"></a>
+                                 
+                                    
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Night Life</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama3.jpg"></a>
+                                  
+                              
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">UFO Mistery</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama4.jpg"></a>
+                                   
+                                  
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The price</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama5.jpg"></a>
+                                   
+                                    
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Great Dancer</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama6.jpg"></a>
+                                  
+                                   
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Doll</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                   
+                </div>
+               
+                <div id="pills-action" class="tab-pane animated fadeInRight active">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama7.jpg"></a>
+                                    
+                                   
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Shark</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama8.jpg"></a>
+                                    
+                                  
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Beautiful Beach</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                           
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama9.jpg"></a>
+                                  
+                                  
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Evil</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        
+                        </div>
+                      
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama10.jpg"></a>
+                                   
+                                 
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Magic Hand</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+               
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama1.jpg"></a>
+                                    
+                               
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Wreck Ship</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                          
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/01.jpg"></a>
+                                   
+                                  
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Happy Marriage</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+          
+                <div id="pills-romance" class="tab-pane animated fadeInRight">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/02.jpg"></a>
+                               
+                                    
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">A Kiss to Remember</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/03.jpg"></a>
+                                 
+                                 
+                                </div>
+                               
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Friend & Love</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                          
+                        </div>
+                       
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/04.jpg"></a>
+                                  
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Millionaire</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/05.jpg"></a>
+                                   
+                                 
+                                </div>
+                             
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">The Dreams</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                      
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="./assets/image/drama5.jpg"></a>
+                               
+                                  
+                                </div>
+                              
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">Color of Life</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://excellencetheme.com/templates/avastream/images/best-romance/06.jpg"></a>
+                                   
+                                  
+                                </div>
+                                
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="shows-single.html">True Love</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                         
+                        </div>
+                       
+                    </div>
+                   
+                </div>
+               
+            </div>
+           
+        </div>
+
+
+        </div>
+       </section>
+
+     <!-- Footer -->
+     <section class="main-footer" style="padding: 30px 20px ">
+        <div class="container-fluid">
+            <div class="row justify-content-lg-between justify-content-center">
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <div class="widget-content">
+                            <div class="footer-logo"><img alt="" class="img-fluid" src="./assets/image/logo-nextstream.png" style="width: 150px;"></div>
+                            <div class="footer-about-text">
+                                <p class="text-light-emphasis" >For more information, please call us or chat with telephone number that we have provide.</p>
+                            </div>
+                            <div class="footer-social-icons">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#" title="twitter"><i class="bi bi-twitter"></i></a>
+                                    </li>
+                                    
+                                    <li class="list-inline-item">
+                                        <a href="#" title="facebook"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    
+                                    <li class="list-inline-item">
+                                        <a href="#" title="instagram"><i class="bi bi-instagram"></i></a>
+                                    </li>
+                                    
+                                    <li class="list-inline-item">
+                                        <a href="#" title="youtube"><i class="bi bi-youtube"></i></a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                          
+                        </div>
+                     
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h2 class="widget-title">Genre</h2>
+                            </div>
+                            <div class="widget-content footer-menu">
+                                <ul class="f-link list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Comedy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Drama</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Horror</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h2 class="widget-title">Production</h2>
+                            </div>
+                            <div class="widget-content footer-menu">
+                                <ul class="f-link list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">2021 Year</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2020 Year</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2022 Year</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2023 Year</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+              
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h2 class="widget-title">Display Quality</h2>
+                            </div>
+                            <div class="widget-content footer-menu">
+                                <ul class="f-link list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">720p HDTV</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1080p BluRay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">720p BluRay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">1080p WEB-DL</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+               
+            </div>
+ 
+        </div>
+      
+     </section>
+     
+     <!-- Copyright -->
+     <section class="copyright">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-md-6">
+                    <p>© Dibimbing 2023 - Asep Candra</p>
+                </div>
+              
+                <div class="col-md-6">
+                    <div class="copyright-menu text-right">
+                        <ul>
+                            <li>
+                                <a href="terms.html">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="privacy.html">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+       
+    </section>
+
+    <!-- Modal Movie -->
+    <div class="modal fade" id="movie1" tabindex="-1" aria-labelledby="product1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">              
+                <div data-bs-theme="dark">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="row">
+                  <div class="col md-4">
+                      <div class="modal-body">
+                        <iframe width="380" height="250" src="https://www.youtube.com/embed/6Vtf0MszgP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   
+                      </div>
+                  </div>
+                 
+                    <div class="col md-4" style="padding: 20px">
+                       <h5 class="modal-tittle">Transformers The Last Knight</h5><br>
+                      <p class="modal-desc">In the wake of many clashes between the transformers, the majority of the governments on Earth have declared the robots illegal, putting a military force in charge of eliminating them. When an autobot ship crashes into Chicago, Cade Yeager, accompanied by the faithful Bumblebee, tries to rescue them. 
+      
+                      </p>
+                      <br>
+                      <h9 class="modal-genre" style="color:  rgb(156, 156, 156)"> Genre :
+                      </h9>
+                      
+                      <span class="label label-genre">Action</span>
+                      <span class="label label-genre">Adventure</span>
+                      <span class="label label-genre">Sci-fi</span>
+                      <span class="label label-genre">Thriller</span>
+                      <br>
+                      <br>
+                      <button type="button" class="btn btn-primary bi bi-play-fill text-light">Watch Now</button>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal fade" id="movie2" tabindex="-1" aria-labelledby="product1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">              
+                <div data-bs-theme="dark">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="row">
+                  <div class="col md-4">
+                      <div class="modal-body">
+                        <iframe width="380" height="250" src="https://www.youtube.com/embed/7Cjj9x8dVGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   
+                      </div>
+                  </div>
+                 
+                    <div class="col md-4" style="padding: 20px">
+                       <h5 class="modal-tittle">Jung E</h5><br>
+                      <p class="modal-desc">Jung_E portrays a desolated Earth in the 22nd century that is no longer habitable due to climate change, and humans are forced to live in man-made shelters built in space. As the humans settle in around 80 of those shelters, three of them declare themselves as the Adrian Republic, attack Earth and other shelters, and cause a civil war between the Allied Force and Adrian Republic. 
+      
+                      </p>
+                      <br>
+                      <h9 class="modal-genre" style="color: #fff"> Genre :
+                      </h9>
+                      
+                      <span class="label label-genre">Action</span>
+                      <span class="label label-genre">Adventure</span>
+                      <span class="label label-genre">Sci-fi</span>
+                      <span class="label label-genre">Thriller</span>
+                      <br>
+                      <br>
+                      <button type="button" class="btn btn-primary bi bi-play-fill text-light">Watch Now</button>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="movie3" tabindex="-1" aria-labelledby="product1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">              
+                <div data-bs-theme="dark">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="row">
+                  <div class="col md-4">
+                      <div class="modal-body">
+                        <iframe width="380" height="250" src="https://www.youtube.com/embed/82I1ErFD63U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   
+                      </div>
+                  </div>
+                 
+                    <div class="col md-4" style="padding: 20px">
+                       <h5 class="modal-tittle">We Have A Ghost</h5><br>
+                      <p class="modal-desc">Finding a ghost named Ernest haunting their new home turns Kevin's family into overnight social media sensations. But when Kevin and Ernest go rogue to investigate the mystery of Ernest's past, they become a target of the CIA. 
+      
+                      </p>
+                      <br>
+                      <h9 class="modal-genre" style="color: #fff"> Genre :
+                      </h9>
+                      
+                      <span class="label label-genre">Action</span>
+                      <span class="label label-genre">Adventure</span>
+                      <span class="label label-genre">Sci-fi</span>
+                      <span class="label label-genre">Thriller</span>
+                      <br>
+                      <br>
+                      <button type="button" class="btn btn-primary bi bi-play-fill text-light">Watch Now</button>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+<!-- Modal Sign In -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="padding: 40px">
+        <div data-bs-theme="dark">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="signin">
+          <div class="pb_41" style="color: rgb(156, 156, 156)">Sign in</div>
+          <div>
+            <input
+              class="form-control input_email"
+              type="email"
+              id="email"
+              placeholder="Enter phone number or email address"
+            />
+          </div>            
+          <div
+            class="form-check form-switch d-flex justify-content-center align-items-center mt_24"
+          >
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+              style="margin: 0"
+            />
+            <label
+              class="form-check-label or_text"
+              for="flexSwitchCheckDefault"
+              >Keep me signed in</label
+            >
+          </div>
+  
+          <div class="d-flex flex-column">
+            <button type="button" class="btn btn-warning mt_24 btn_signin">
+              Sign In
+            </button>
+            <button type="button" class="btn btn-link mt_24 btn_signup" style="margin-top: 15px;">
+              Sign Up
+            </button>
+          </div>
+  
+          <div class="or_text mt_24" style="text-align: center">or</div>
+  
+          <div class="d-flex flex-column mt_24" style="gap: 12px">
+            <button type="button" class="btn btn-light btn_sosmed">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-google"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+                />
+              </svg>
+              Continue with Google
+            </button>
+            <button type="button" class="btn btn-light btn_sosmed">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="#1976D2"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                />
+              </svg>
+              Continue with Facebook
+            </button>
+            <button type="button" class="btn btn-light btn_sosmed">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-apple"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"
+                />
+                <path
+                  d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"
+                />
+              </svg>
+              Continue with Apple
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+  
+
+
+        
+
+      
+
+    
+
+  
+
+
+
+    
+
+
+
+     <script>
+      const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY >= 56) {
+        navEl.classList.add('navbar-scrolled');
+          } else if (window.scrollY < 56) {
+        navEl.classList.remove ('navbar-scrolled');
+
+      }
+    });
+     </script> 
+  </body>
+</html>
