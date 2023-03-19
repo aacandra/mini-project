@@ -191,21 +191,27 @@ section {
     box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 } 
 
-.premiereThumbsmall span i {
+.premiereThumbsmall i {
     position:relative; 
     bottom:130px;
     left:130px;
     font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+  
+
     
 } 
 
 
-@media screen and (max-width: 766px) {
-    .premiereThumbsmall span i {        
+@media screen and (max-width: 768px) {
+    .premiereThumbsmall i {        
         position: relative;
         bottom: 250px;
-        left: 300px;
-        font-size: 65px;
+        left: 280px;
+        font-size: 55px;
+       
     }
     } 
     
