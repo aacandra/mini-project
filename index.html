@@ -24,7 +24,6 @@
     <!-- Additional Links -->
 
     <link rel="shortcut icon" href="./assets/image/nextstream-icon.png">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
 
@@ -80,18 +79,16 @@
                         data-bs-target="#signInModal"
                         >Sign In</a>
                       </li>
-                    </ul>
-
-                    <form id="search" action="#">
-                      <input type="text" 
-                        placeholder="Search"
-                        id='searchText' 
-                        name="searchKeyword" 
-                        onkeypress="handle" 
-                        style="margin: 10px 40px;"/>
-                      
-                    </form>                    
+                    </ul>                   
                   </div>
+                  
+                  <form class="search" autocomplete="off" action="/action_page.php">
+                    <div class="autocomplete" >
+                      <input id="myInput" type="text" name="myMovies" placeholder="Find a Movies"/>
+                    </div>
+                      <i class="bi bi-search"></i>
+                  </form>          
+                
                 </div>
               </nav>
      </header>
@@ -693,8 +690,8 @@
                                   <div class="movie__short-description" style="color:#fff">
                                       <div>
                                         <h3>The Last Heroes</h3>
-                                       <p>Strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.</p> 
-                                       <button type="button" class="btn btn-info" style="font-size:13px; color:#fff">
+                                       <p>Stranges black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge.</p> 
+                                       <button id="featured-movie" onclick="alert('This Movie will be Avalable Soon')" type="button" class="btn btn-info" style="font-size:13px; color:#fff">
                                         <i class="bi bi-play-fill text-light" ></i> Watch Now
                                       </button>                                       
                                      
@@ -709,7 +706,7 @@
                    
                 
                 <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6" style="margin-top: 50px;">
-                    <a class="featured-movie-icon">
+                    <a href="#" class="featured-movie-icon">
                     <i class="bi bi-play-circle"></i>
                     </a>
                 </div>
@@ -1236,6 +1233,7 @@
         </div>
        </section>
 
+
      <!-- Footer -->
      <section class="main-footer" style="padding: 30px 20px ">
         <div class="container-fluid">
@@ -1248,7 +1246,25 @@
                                 <p class="text-light-emphasis" >For more information, please call us or chat with telephone number that we have provide.</p>
                             </div>
                             <div class="footer-social-icons">
-                                <ul class="list-inline">
+                                <img src="./assets/image/twitter.png" alt="twitter" id="img-1"
+                                onmouseover="mouseIn(1)"
+                                onmouseout="mouseOut(1)"
+                                />
+                                <img src="./assets/image/facebook.png" alt="facebook" id="img-2"
+                                onmouseover="mouseIn(2)"
+                                onmouseout="mouseOut(2)"
+                                />
+                                <img src="./assets/image/instagram.png" alt="instagram" id="img-3"
+                                onmouseover="mouseIn(3)"
+                                onmouseout="mouseOut(3)"
+                                />
+                                <img src="./assets/image/youtube.png" alt="youtube" id="img-4"
+                                onmouseover="mouseIn(4)"
+                                onmouseout="mouseOut(4)"
+                                />
+
+
+                                <!-- <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <a href="#" title="twitter"><i class="bi bi-twitter"></i></a>
                                     </li>
@@ -1265,7 +1281,7 @@
                                         <a href="#" title="youtube"><i class="bi bi-youtube"></i></a>
                                     </li>
                                     
-                                </ul>
+                                </ul> -->
                             </div>
                           
                         </div>
@@ -1608,35 +1624,100 @@
     </div>
   </div>
 
-
-
-    
-
-
-
-
-
-
-
-
-  
-
-
-        
-
       
 
-    
-
   
-
-
-
-    
-
+  <!-- DOM Manipulation -->
 
 
      <script>
+
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["A Beautiful Mind", "Ali", "American Beauty", "Avatar",  "Batman", "Bad Cops", "Casino", "Casino Royale", "Cabble Guy", "The Dark Knight","Die Hard", "Equilibrium","Fight Club", "Forest Gump", "Gladiator", "Home Alone", "Inception", "Indiana Jones", "Kick Ass", "Last Samurai", "Magnificient", "Men In Black", "Nice Guy", "Open Order", "Quick Sands", "Robocop", "Sentinel", "UFO", "Vintage", "X Men", "Young Guns", "Zorro"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+
+
+
+
+
+
+
+
       const navEl = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
           if (window.scrollY >= 56) {
@@ -1646,6 +1727,49 @@
 
       }
     });
+
+   
+
+      var img1 = document.getElementById("img-1");
+      var img2 = document.getElementById("img-2");
+      var img3 = document.getElementById("img-3");
+      var img4 = document.getElementById("img-4");
+
+      function mouseIn(ele) {
+        if (ele == 1) {
+            img1.setAttribute("src","./assets/image/twitter-color.png");
+        } else if (ele == 2) {
+            img2.setAttribute("src","./assets/image/facebook-color.png"); 
+        } else if (ele == 3) {
+            img3.setAttribute("src","./assets/image/instagram-color.png");
+        } else {
+            img4.setAttribute("src","./assets/image/youtube-color.png");
+        }
+      }
+
+      function mouseOut(ele) {
+        if (ele == 1) {
+            img1.setAttribute("src", "./assets/image/twitter.png");
+        } else if (ele == 2) {
+            img2.setAttribute("src", "./assets/image/facebook.png"); 
+        } else if (ele == 3) {
+            img3.setAttribute("src", "./assets/image/instagram.png");
+        } else {
+            img4.setAttribute("src", "./assets/image/youtube.png");
+        }
+      }
+
+
+   
+      document.getElementById(featured-movie).onclick = function () {
+        alert('This Movie will be Avalable Soon')
+      }  
+
+
+ 
+    
+
+
      </script> 
   </body>
 </html>
