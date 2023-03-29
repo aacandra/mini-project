@@ -48,58 +48,49 @@
        <!-- Navbar Area -->
     
      <header class="navbar-wrap">              
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-                <div class="container" >
-                  <a class="navbar-brand" href="./index.html"> <img src="./assets/image/logo-nextstream.png"></a>
-                  <button 
-                  class="navbar-toggler" 
-                  type="button" 
-                  data-bs-toggle="collapse" 
-                  data-bs-target="#navbarSupportedContent" 
-                  aria-controls="navbarSupportedContent" 
-                  aria-expanded="false" 
-                  aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-        
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-5 mb-lg-0">
-                      <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">Movie</a>
-                      </li>
-                      <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">TV Shows</a>
-                      </li>              
-                      <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contact.html">Contact</a>
-                      </li>
-                      <li class="nav-item mx-3">
-                        <a class="nav-link" href="#"
-                        data-bs-toggle="modal"
-                        data-bs-target="#signInModal"
-                        >Sign In</a>
-                      </li>
-                    </ul>
-
-                    <div class="search-input">
-                        <form id="search" action="#">
-                          <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                          <i class="bi bi-search"></i>
-                        </form>
-                      </div>
-                    <!-- <form id="search" action="#">
-                      <input type="text" 
-                        placeholder="Search"
-                        id='searchText' 
-                        name="searchKeyword" 
-                        onkeypress="handle" 
-                        style="margin: 10px 40px;"/>
-                      
-                    </form> -->
-                         
-                  </div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container" >
+              <a class="navbar-brand" href="./index.html"> <img src="./assets/image/logo-nextstream.png"></a>
+              <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-5 mb-lg-0">
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="#movies">Movies</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="#best-series">Series</a>
+                  </li>              
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="#" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#signInModal"
+                    >Sign In</a>
+                  </li>
+                </ul>                   
+              </div>
+              
+              <form class="search" autocomplete="off" action="/action_page.php">
+                <div class="autocomplete" >
+                  <input id="myInput" type="text" name="myMovies" placeholder="Find a Movies"/>
                 </div>
-              </nav>
+                  <i class="bi bi-search"></i>
+              </form>          
+            
+            </div>
+          </nav>
      </header>
     
      <!-- Breaadcrumbs -->
@@ -113,7 +104,7 @@
           </nav>
 
        </div>
-    </section>
+     </section>
      <!--Form  -->
      <section class="contact-form">
         <div class="container" style="background-color: #95d1e973 ; border-radius: 8px;">
@@ -166,7 +157,7 @@
    
 
     <!-- Modal Sign In -->
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+     <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content" style="padding: 40px">
         <div data-bs-theme="dark">
@@ -263,138 +254,137 @@
         </div>
       </div>
     </div>
-    </div>
+     </div>
 
 
      <!-- Footer -->
      <section class="main-footer" style="padding: 30px 20px ">
-        <div class="container-fluid">
-            <div class="row justify-content-lg-between justify-content-center">
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <div class="widget-content">
-                            <div class="footer-logo"><img alt="" class="img-fluid" src="./assets/image/logo-nextstream.png" style="width: 150px;"></div>
-                            <div class="footer-about-text">
-                                <p class="text-light-emphasis" >For more information, please call us or chat with telephone number that we have provide.</p>
-                            </div>
-                            <div class="footer-social-icons">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a href="#" title="twitter"><i class="bi bi-twitter"></i></a>
-                                    </li>
-                                    
-                                    <li class="list-inline-item">
-                                        <a href="#" title="facebook"><i class="bi bi-facebook"></i></a>
-                                    </li>
-                                    
-                                    <li class="list-inline-item">
-                                        <a href="#" title="instagram"><i class="bi bi-instagram"></i></a>
-                                    </li>
-                                    
-                                    <li class="list-inline-item">
-                                        <a href="#" title="youtube"><i class="bi bi-youtube"></i></a>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                          
-                        </div>
-                     
-                    </div>
-                    
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <div class="widget">
-                            <div class="widget-header">
-                                <h2 class="widget-title">Genre</h2>
-                            </div>
-                            <div class="widget-content footer-menu">
-                                <ul class="f-link list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">Action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Comedy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Drama</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Horror</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
+      <div class="container-fluid">
+          <div class="row justify-content-lg-between justify-content-center">
+              <div class="col-md-3">
+                  <div class="footer-widget">
+                      <div class="widget-content">
+                          <div class="footer-logo"><img alt="" class="img-fluid" src="./assets/image/logo-nextstream.png" style="width: 150px;"></div>
+                          <div class="footer-about-text">
+                              <p class="text-light-emphasis" >For more information, please call us or chat with telephone number that we have provide.</p>
+                          </div>
+                          <div class="footer-social-icons">
+                              <img src="./assets/image/twitter.png" alt="twitter" id="img-1"
+                              onmouseover="mouseIn(1)"
+                              onmouseout="mouseOut(1)"
+                              />
+                              <img src="./assets/image/facebook.png" alt="facebook" id="img-2"
+                              onmouseover="mouseIn(2)"
+                              onmouseout="mouseOut(2)"
+                              />
+                              <img src="./assets/image/instagram.png" alt="instagram" id="img-3"
+                              onmouseover="mouseIn(3)"
+                              onmouseout="mouseOut(3)"
+                              />
+                              <img src="./assets/image/youtube.png" alt="youtube" id="img-4"
+                              onmouseover="mouseIn(4)"
+                              onmouseout="mouseOut(4)"
+                              />
+
+                          </div>
                         
-                    </div>
+                      </div>
+                   
+                  </div>
                   
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <div class="widget">
-                            <div class="widget-header">
-                                <h2 class="widget-title">Production</h2>
-                            </div>
-                            <div class="widget-content footer-menu">
-                                <ul class="f-link list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">2021 Year</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2020 Year</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2022 Year</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">2023 Year</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                       
-                    </div>
-                    
-                </div>
+              </div>
               
-                <div class="col-md-3">
-                    <div class="footer-widget">
-                        <div class="widget">
-                            <div class="widget-header">
-                                <h2 class="widget-title">Display Quality</h2>
-                            </div>
-                            <div class="widget-content footer-menu">
-                                <ul class="f-link list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">720p HDTV</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">1080p BluRay</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">720p BluRay</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">1080p WEB-DL</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                       
-                    </div>
-                    
-                </div>
-               
-            </div>
- 
-        </div>
-      
+              <div class="col-md-3">
+                  <div class="footer-widget">
+                      <div class="widget">
+                          <div class="widget-header">
+                              <h2 class="widget-title">Genre</h2>
+                          </div>
+                          <div class="widget-content footer-menu">
+                              <ul class="f-link list-unstyled mb-0">
+                                  <li>
+                                      <a href="#">Action</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Comedy</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Drama</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Horror</a>
+                                  </li>
+                              </ul>
+                          </div>
+                          
+                      </div>
+                      
+                  </div>
+                
+              </div>
+              
+              <div class="col-md-3">
+                  <div class="footer-widget">
+                      <div class="widget">
+                          <div class="widget-header">
+                              <h2 class="widget-title">Production</h2>
+                          </div>
+                          <div class="widget-content footer-menu">
+                              <ul class="f-link list-unstyled mb-0">
+                                  <li>
+                                      <a href="#">2021 Year</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">2020 Year</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">2022 Year</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">2023 Year</a>
+                                  </li>
+                              </ul>
+                          </div>
+                          
+                      </div>
+                     
+                  </div>
+                  
+              </div>
+            
+              <div class="col-md-3">
+                  <div class="footer-widget">
+                      <div class="widget">
+                          <div class="widget-header">
+                              <h2 class="widget-title">Display Quality</h2>
+                          </div>
+                          <div class="widget-content footer-menu">
+                              <ul class="f-link list-unstyled mb-0">
+                                  <li>
+                                      <a href="#">720p HDTV</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">1080p BluRay</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">720p BluRay</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">1080p WEB-DL</a>
+                                  </li>
+                              </ul>
+                          </div>
+                          
+                      </div>
+                     
+                  </div>
+                  
+              </div>
+             
+          </div>
+
+      </div>
+    
      </section>
      
      <!-- Copyright -->
@@ -423,10 +413,10 @@
             
         </div>
        
-    </section>
+     </section>
 
-    <!-- Modal Movie -->
-    <div class="modal fade" id="movie1" tabindex="-1" aria-labelledby="product1Label" aria-hidden="true">
+     <!-- Modal Movie -->
+     <div class="modal fade" id="movie1" tabindex="-1" aria-labelledby="product1Label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -448,49 +438,9 @@
             </div>
           </div>
         </div>
-      </div>
+     </div>
 
-    
-
-
-
-
-
-
-
-
-  
-
-
-        
-
-      
-
-    
-
-  
-
-
-
-    
-
-
-
-     <script>
-      const navEl = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-          if (window.scrollY >= 56) {
-        navEl.classList.add('navbar-scrolled');
-          } else if (window.scrollY < 56) {
-        navEl.classList.remove ('navbar-scrolled');
-
-      }
-    });
-
-
-
-
-
-     </script> 
+     
+     <script src="./script.js"></script>  
   </body>
 </html>
